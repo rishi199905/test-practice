@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,8 +8,10 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import Body from './components/Body';
 import RestaurantMenu from './components/RestaurantMenu';
+// import Grocery from './components/Grocery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const Grocery = lazy( () => import("./components/Grocery"))
 
 const appRouter = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />
+      },
+      {
+        path:"/grocery",
+        element: <Grocery />
       }
     ],
     errorElement: <Error />

@@ -1,3 +1,5 @@
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -66,4 +68,10 @@
 
 .menu-item:hover {
   border: 1px solid rgb(15, 15, 15);
+}
+
+.add-btn {
+  padding: 0 8px;
+  border: 2 solid black;
+  border-radius: 10%;
 }
